@@ -1,10 +1,32 @@
-* {
-  margin: 0;
-  padding: 0;
+
+#root {
+  color: #fff;
   font-family: system-ui;
 }
 
-#root {
+.navbar {
+  display: block;
+  background: #43a047;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1{
   text-align: center;
   color: #43a047;
+}
+
+.card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heart {
+  cursor: pointer;
 }
