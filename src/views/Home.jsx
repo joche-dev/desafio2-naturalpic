@@ -1,31 +1,13 @@
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import { useContext } from 'react';
-import { Context } from '../Context';
-import Heart from '../componentes/Heart';
+import { Container, Row } from 'react-bootstrap';
+import Gallery from '../componentes/Gallery';
 
 export default function Home() {
-  const { fotos } = useContext(Context);
-
-  const mostrarFotos = fotos.map((foto) => (
-    <Col key={foto.id}>
-      <Card className="text-white">
-        <Card.Img src={foto.src} alt={foto.alt} />
-        <Card.ImgOverlay>
-          <Card.Text className="text-end">
-            <Heart id={foto.id} />
-          </Card.Text>
-          <Card.Text>{foto.alt}</Card.Text>
-        </Card.ImgOverlay>
-      </Card>
-    </Col>
-  ));
-
   return (
     <>
       <Container>
         <h1 className="my-3">Natural Pic</h1>
         <Row xs={1} md={2} lg={4} className="g-3 mb-3">
-          {mostrarFotos}
+          <Gallery filtro={'home'}/>
         </Row>
       </Container>
     </>
