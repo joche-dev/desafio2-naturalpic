@@ -1,20 +1,20 @@
 import { useContext } from 'react';
 import { Context } from '../Context';
 
-export default function Heart({ color, id }) {
+export default function Heart({ id }) {
   const { fotos, setFotos } = useContext(Context);
+  const fotoFavorita = fotos.find((foto) => foto.id === id);
 
-  function handleClick(id) {
+  function handleClick() {
+    fotoFavorita.liked = !fotoFavorita.liked;
     const newFotos = [...fotos];
-    const fotoFavorita = newFotos.find((foto) => foto.id === id);
-
-    fotoFavorita.liked = fotoFavorita.liked ? false : true;
     setFotos(newFotos);
-
   }
 
+  const color = fotoFavorita.liked ? 'red' : 'white';
+
   return (
-    <span className="heart" onClick={() => handleClick(id)}>
+    <span className="heart" onClick={handleClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
