@@ -1,7 +1,8 @@
 .navbar {
-    background: #43a047;
-    padding: 1.2rem;
-    color: white;
+  display: block;
+  background: #43a047;
+  padding: 1.2rem;
+  color: white;
 }
 
 a {

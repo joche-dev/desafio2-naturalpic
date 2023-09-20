@@ -1,7 +1,9 @@
+import { Container } from 'react-bootstrap';
+
 export default function Favoritos() {
   return (
-    <div>
-      <h1>Favoritos</h1>
-    </div>
+    <Container>
+      <h1 className='py-3'>Favoritos</h1>
+    </Container>
   );
 }

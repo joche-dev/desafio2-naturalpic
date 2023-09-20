@@ -1,7 +1,9 @@
+import { Container } from 'react-bootstrap';
+
 export default function Home() {
   return (
-    <div>
-      <h1>Natural Pic</h1>
-    </div>
+    <Container>
+      <h1 className='py-3'>Natural Pic</h1>
+    </Container>
   );
 }
