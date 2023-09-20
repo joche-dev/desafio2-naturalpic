@@ -9,13 +9,7 @@ export default function Gallery({ filtro = 'home' }) {
   return (
     <>
       {fotos
-        .filter((foto) => {
-          if (filtro === 'favoritos') {
-            return foto.liked === true;
-          } else {
-            return true;
-          }
-        })
+        .filter((foto) => (filtro === 'favoritos' ? foto.liked === true : true))
         .map((foto) => (
           <Col key={foto.id}>
             <Card className="text-white">
