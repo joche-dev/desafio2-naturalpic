@@ -4,9 +4,10 @@ export const Context = createContext();
 
 export function Provider({ children }) {
   const [fotos, setFotos] = useState([]);
+  const URL_BASE = "https://jochejiro.github.io/desafio2-naturalpic/"
 
   const getData = async () => {
-    const res = await fetch('/fotos.json');
+    const res = await fetch( `${URL_BASE}fotos.json`);
     const data = await res.json();
     const photos = data.photos.map((photos) => {
       return {
