@@ -4,10 +4,10 @@ export const Context = createContext();
 
 export function Provider({ children }) {
   const [fotos, setFotos] = useState([]);
-  const URL_BASE = "https://jochejiro.github.io/desafio2-naturalpic/"
+  const URL = "https://jochejiro.github.io/desafio2-naturalpic/fotos.json"
 
   const getData = async () => {
-    const res = await fetch( `${URL_BASE}fotos.json`);
+    const res = await fetch(URL);
     const data = await res.json();
     const photos = data.photos.map((photos) => {
       return {
