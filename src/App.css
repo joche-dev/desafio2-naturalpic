@@ -1,4 +1,3 @@
-
 #root {
   color: #fff;
   font-family: system-ui;
@@ -16,15 +15,23 @@ a {
   color: #fff;
 }
 
-h1{
+h1 {
   text-align: center;
   color: #43a047;
+}
+
+.card {
+  transition: all 0.3s ease-out;
 }
 
 .card-img-overlay {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.card:hover {
+  transform: scale(1.08);
 }
 
 .heart {
