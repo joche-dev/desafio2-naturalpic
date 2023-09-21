@@ -16,8 +16,8 @@ function App() {
         <BrowserRouter>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/favoritos" element={<Favoritos />} />
+            <Route path="/desafio2-naturalpic/" element={<Home />} />
+            <Route path="/desafio2-naturalpic/favoritos" element={<Favoritos />} />
           </Routes>
         </BrowserRouter>
       </Provider>

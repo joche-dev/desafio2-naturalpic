@@ -4,10 +4,15 @@ export const Context = createContext();
 
 export function Provider({ children }) {
   const [fotos, setFotos] = useState([]);
-  const URL = "fotos.json"
+  const baseURL = 'https://api.pexels.com/v1/search?query="nature"&page=1&per_page=20';
+  const API_KEY = 'CDIsblW2M65S2lQlaKXqr8rd6o0sWPDKe2eBJ1nCAvHZXu13SSyTOZ09';
 
   const getData = async () => {
-    const res = await fetch("fotos.json");
+    const res = await fetch(baseURL, {
+      headers: {
+        Authorization: API_KEY,
+      },
+    });
     const data = await res.json();
     const photos = data.photos.map((photos) => {
       return {
