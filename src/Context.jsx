@@ -4,10 +4,10 @@ export const Context = createContext();
 
 export function Provider({ children }) {
   const [fotos, setFotos] = useState([]);
-  const URL = "./fotos.json"
+  const URL = "fotos.json"
 
   const getData = async () => {
-    const res = await fetch(URL);
+    const res = await fetch("fotos.json");
     const data = await res.json();
     const photos = data.photos.map((photos) => {
       return {
