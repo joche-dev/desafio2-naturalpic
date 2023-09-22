@@ -21,7 +21,7 @@ h1 {
 }
 
 .card {
-  transition: all 0.3s ease-out;
+  transition: all 0.3s;
 }
 
 .card-img-overlay {
@@ -32,6 +32,11 @@ h1 {
 
 .card:hover {
   transform: scale(1.08);
+}
+
+.card:hover .card-img{
+  /* background-color: rgba(67, 160, 71, .5); */
+  filter: brightness(50%);
 }
 
 .heart {
