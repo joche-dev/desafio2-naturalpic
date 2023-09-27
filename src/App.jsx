@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Provider } from './Context';
+import { FotoProvider } from './contexts/FotoContext';
 import Navbar from './componentes/Navbar';
 import Home from './views/Home';
 import Favoritos from './views/Favoritos';
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Provider>
+      <FotoProvider>
         <BrowserRouter>
           <Navbar />
           <Routes>
@@ -22,7 +22,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
-      </Provider>
+      </FotoProvider>
 
     </>
   );

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Context } from '../Context';
+import { Context } from '../contexts/FotoContext';
 
 export default function Heart({ id }) {
   const { fotos, setFotos } = useContext(Context);

@@ -1,6 +1,6 @@
 import { Col, Card } from 'react-bootstrap';
 import { useContext } from 'react';
-import { Context } from '../Context';
+import { Context } from '../contexts/FotoContext';
 import Heart from '../componentes/Heart';
 
 export default function Gallery({ filtro = 'home' }) {
